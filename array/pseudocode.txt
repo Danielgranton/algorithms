@@ -14,3 +14,7 @@ START
     PRINT inserted successfully
 
 END
+
+time complexity the loop shifts elements one by one;
+therefor time complexity is O(n)
+space complexity 0(1) no extra arry is created 
