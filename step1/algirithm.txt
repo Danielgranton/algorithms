@@ -1,3 +1,5 @@
+findind the bigest number in an array
+
 START 
     SET marks = [78, 65, 90,54, 88]
     SET max = marks[0]
@@ -21,3 +23,36 @@ i = 3 ---> marks[3] 54 < 90 no change max stays 90
 i = 4 ---> marks[4] 88 < 90 no cahnge max stays 90
 
 output the largest marks is 90
+
+
+is a prime number
+
+START 
+    INPUT Number 
+    IF number <= 1 THEN 
+        PRINT "not prime"
+        STOP
+    END IF
+
+    FOR divisor = 2 TO number -1 
+        IF number MOD divisor = 0 THEN 
+            PRINT "not prime"
+            STOP
+        END IF
+    END FOR
+
+    PRINT "prime"
+END
+
+time complexity , the loop runs from 2 -> number -1 ,
+worst case when the number is prime , it checks almost all number 
+before reaching the end , therefor the time complexity:O(n), 
+space complexity :O(1)
+
+we can make it faster , we only need to check the divisor
+up to the square root ot the number for example with 49;
+instead of checking for 2 to 48 we check up to 7 , that reduces
+time coplexity to O(square root of n);
+
+so now we replace the line (FOR divisor =2 number -1 ) with
+FOR divisor = 2 TO sqrt (n)
