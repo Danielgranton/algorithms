@@ -1,0 +1,14 @@
+START 
+    SET marks = [78, 65, 90,54, 88]
+    SET max = marks[0]
+
+    FOR  i FROM 1 TO 4 DO 
+        IF marks[i] > max THEN 
+            SET max = marks[i]
+        END IF
+    END FOR
+
+    PRINT "the largest marks is :"+ max
+
+END
+     
