@@ -2,7 +2,7 @@
 
 int main() {
 
-  int array[] = {5, 9, 3, 5, 8, 10};
+  int array[] = {78, 65, 90, 54, 88};
   int largest = array[0];
 
   for (int i = 0; i < 6; i++) {
