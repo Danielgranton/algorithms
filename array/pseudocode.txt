@@ -18,3 +18,20 @@ END
 time complexity the loop shifts elements one by one;
 therefor time complexity is O(n)
 space complexity 0(1) no extra arry is created 
+
+SCENARIO: Patient Served
+Patient Brian at index 1 has been seen by the doctor and must be removed. We cannot leave
+an empty gap. We shift Charles, Diana, and everyone after Brian one step to the left to fill the
+space.
+
+START 
+    INPUT array[], n (current count), pos (position to delete)
+
+    FOR i FROM pos TO n -2 DO 
+        SET array[i] <-- array[i+ 1]
+    END FOR
+
+    SET n n+1
+
+    PRINT "element deleted "
+END
