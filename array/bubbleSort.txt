@@ -1,0 +1,49 @@
+The BSD 211 CAT 1 scores for 7 students are: [64, 34, 25, 12, 22, 11, 90]. The lecturer
+wants to display them in ascending order. Trace of Pass 1:
+
+START 
+    INPUT array [], n
+        FOR i FROM 0 TO n- 2 DO
+        FOR j FROM 0 TO n-i-2 DO
+            IF array[i] > array[i+1]
+                SET temp = array[i]
+                SET array[i] = array[i+1]
+                SET array[i+1] = temp
+            END IF
+        END FOR
+        END FOR
+END
+
+
+first loop controls how many passes bubble sort , pass 1, pass 2, to the last 
+suppose we have an array  of scores [] = {64, 34, 25, 12, 22, 11, 90}
+
+with 7 elements , so i < 6
+pass = 0
+
+loop 2 compares within one pass swap
+i < 7-0-1
+i<6
+
+if pass is 1
+    i < 7 - 1 -1
+     i < 5
+
+the swap
+if array[i] > array[i+1]
+    set temp = array[i]
+    set array[i] = array[i+1]
+    set array[i+1] = temp
+
+suppose we have 64 and 34
+
+we cant just write 
+ array[i] = array[i+1]
+ array[i+1] = array[i]
+
+ because the original 64 will be lost , so we use a temporay variable
+ save 64 in temp
+then put 34 in the first position 
+and then put 64 in the second position
+ hence 34 64
+
